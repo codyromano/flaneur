@@ -3,7 +3,7 @@ import {HashRouter, Route, Link, Switch} from 'react-router-dom';
 import PickRegionPage from 'pages/PickRegionPage.jsx';
 import PickNextActivityPage from 'pages/PickNextActivityPage.jsx';
 import TravelPage from 'pages/TravelPage.jsx';
-import styles from 'styles/BasePage.css';
+import styles from 'styles/BasePage.scss';
 
 class BasePage extends React.Component {
   constructor() {
