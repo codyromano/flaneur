@@ -9,6 +9,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.css$/,
+        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
+      },
+      {
         test: /\.json$/,
         loader: 'json-loader'
       },
@@ -31,6 +35,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'styles': path.resolve(__dirname, 'src/styles'),
       'flaneur-utils': path.resolve(__dirname, 'src/script/utils.js'),
       'components': path.resolve(__dirname, 'src/script/components'),
       'filters': path.resolve(__dirname, 'src/script/filters'),

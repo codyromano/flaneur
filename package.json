@@ -10,6 +10,7 @@
   "author": "Cody Romano",
   "license": "MIT",
   "dependencies": {
+    "css-loader": "^0.28.1",
     "haversine": "^1.0.2",
     "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
@@ -17,7 +18,7 @@
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-router-dom": "^4.1.1",
-    "shortid": "^2.2.8"
+    "style-loader": "^0.17.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
