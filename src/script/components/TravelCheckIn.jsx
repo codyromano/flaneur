@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import Button from 'components/Button.jsx';
 
 class TravelCheckIn extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class TravelCheckIn extends React.Component {
       <h1>{about}</h1>
       <p>Check-in to unlock additional activities</p>
 
-      <button onClick={() => checkIn(activity)}>Check-in</button>
+      <Button onClick={() => checkIn(activity)}>Check-in</Button>
     </div>;
   }
 }
