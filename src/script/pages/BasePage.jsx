@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import {HashRouter, Route, Link, Switch} from 'react-router-dom';
 import PickRegionPage from 'pages/PickRegionPage.jsx';
 import PickNextActivityPage from 'pages/PickNextActivityPage.jsx';
+import LandingPage from 'pages/LandingPage.jsx';
 import TravelPage from 'pages/TravelPage.jsx';
 import styles from 'styles/BasePage.scss';
 
@@ -14,8 +15,10 @@ class BasePage extends React.Component {
       <div className={styles.mainContainer}>
         <Switch>
           <Route path="/travel/:activityId" component={TravelPage}/>
+          <Route path="/travel/:activityId" component={TravelPage}/>
           <Route path="/pick-next-activity" component={PickNextActivityPage}/>
-          <Route path="/" component={PickRegionPage}/>
+          <Route path="/pick-region" component={PickRegionPage}/>
+          <Route path="/" component={LandingPage}/>
         </Switch>
       </div>
     );
