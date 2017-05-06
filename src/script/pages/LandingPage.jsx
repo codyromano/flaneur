@@ -13,10 +13,11 @@ class LandingPage extends React.Component {
     routerRedirect('pick-region');
   }
   render() {
+    const landingContainer = [mainContainer, styles.content].join(' ');
     return (
       <div className={styles.background}>
-        <div className={mainContainer}>
-          <h1 className={styles.logo}>Flaneur</h1>
+        <div className={landingContainer}>
+          <h1 className={styles.logo}>flâ·neur</h1>
           <h2 className={styles.subheading}>(Noun) A person who wanders through
           a city for the sake of exploring it.</h2>
 
