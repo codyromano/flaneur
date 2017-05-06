@@ -3,17 +3,27 @@ import styles from 'styles/Button.scss';
 
 class Button extends React.Component {
   render() {
+    const {subtitle} = this.props;
     const props = Object.assign({}, this.props);
 
     const className = this.props.block ? styles.blockButton : styles.button;
     props.className = (props.className || '').concat(className);
 
-    return <button {...props}>{this.props.children}</button>;
+    let subtitleDisplay = '';
+    if (subtitle) {
+      subtitleDisplay = <span className={styles.subtitle}>{subtitle}</span>;
+    }
+
+    return <button {...props}>
+      {this.props.children}
+      {subtitleDisplay}
+    </button>;
   }
 }
 
 Button.defaultProps = {
-  block: PropTypes.bool.isRequired
+  block: true,
+  subtitle: ''
 };
 
 export default Button;

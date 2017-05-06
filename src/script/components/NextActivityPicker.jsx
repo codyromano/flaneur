@@ -5,7 +5,11 @@ class NextActivityPicker extends React.Component {
   render() {
     const options = this.props.options.map((activity, i) => {
       const callback = () => this.props.pickNextActivity(activity);
-      return <Button key={i} onClick={callback}>{activity.about}</Button>;
+      return <Button
+        key={i}
+        onClick={callback}
+        subtitle={activity.region}
+        >{activity.about}</Button>;
     });
 
     return (<div className="next-activity-picker">

@@ -18,3 +18,12 @@
   width: 100%;
   margin-bottom: $layout-row-height-half;
 }
+
+.subtitle {
+  display: block;
+  margin-top: $layout-row-height-third;
+
+  color: $color-muted;
+  font-style: italic;
+  font-size: 0.75em;
+}
