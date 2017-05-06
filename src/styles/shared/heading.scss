@@ -1,0 +1,8 @@
+@import "../manifest.scss";
+
+.heading {
+  @include basic-reset;
+}
+.subheading {
+  @include basic-reset;
+}

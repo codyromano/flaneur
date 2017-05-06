@@ -1,4 +1,17 @@
+@import 'manifest';
+
 .background {
-  background: url(https://s-media-cache-ak0.pinimg.com/originals/d8/1c/71/d81c719a1eb4b081cbcb3b8ceb7f9659.jpg) no-repeat;
+  background: url(https://preview.ibb.co/dWngrQ/sky_observatory.jpg) no-repeat;
+  background-position: center;
   background-size: cover;
+  height: 100vh;
+  padding-top: 3rem;
+}
+.logo {
+  composes: heading from './shared/heading.scss';
+  font-size: 3rem;
+}
+.subheading {
+  display: block;
+  margin-bottom: $layout-row-height;
 }

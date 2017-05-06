@@ -2,8 +2,20 @@
   <head>
     <title>Flaneur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+    /* TODO: Move to globals stylesheet */
+    *, *::after, *::before {
+      box-sizing: border-box;
+    }
+    .reset {
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+
   </head>
-  <body>
+  <body class="reset">
     <div id="root"></div>
     <script src="browser-bundle.js"></script>
   </body>
