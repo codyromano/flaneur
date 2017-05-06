@@ -10,8 +10,23 @@
     "location": [47.639605, -122.326242]
   },
   {
+    "about": "Get a delicious drink or snack from Starbucks",
+    "region": "Eastlake",
+    "location": [47.641021, -122.325562]
+  },
+  {
     "about": "Check out the little chess school",
     "region": "Eastlake",
     "location": [47.639083, -122.325553]
+  },
+  {
+    "about": "Board the Seattle Street Car going southbound",
+    "region": "Eastlake",
+    "location": [47.6276113, -122.3343831]
+  },
+  {
+    "about": "Take a photo of Lake Union from the MOHAI",
+    "region": "South Lake Union",
+    "location": [47.6260643, -122.3385284]
   }
 ]
