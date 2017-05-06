@@ -1,0 +1,14 @@
+@import 'manifest';
+
+.button {
+  @include reset-input-appearance;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border: dashed 0.1rem #555;
+  padding: 0.5em 1.5em;
+}
+
+.button + .button {
+  margin-left: 0.5rem;
+}

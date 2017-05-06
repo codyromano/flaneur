@@ -1,8 +1,11 @@
 import React, {PropTypes} from 'react';
+import styles from 'styles/Button.scss';
 
 class Button extends React.Component {
   render() {
-    return <button {...this.props}>{this.props.children}</button>;
+    const props = Object.assign({}, this.props);
+    props.className = (props.className || '').concat(styles.button);
+    return <button {...props}>{this.props.children}</button>;
   }
 }
 
