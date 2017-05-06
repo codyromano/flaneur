@@ -2,16 +2,16 @@
   {
     "about": "Walk to Eastlake and Lynn",
     "region": "Eastlake",
-    "location": [10.2222, 10.3333]
+    "location": [47.639737, -122.325887]
   },
   {
     "about": "Enjoy a coffee at Voxx",
     "region": "Eastlake",
-    "location": [30.312, 30.1223]
+    "location": [47.639605, -122.326242]
   },
   {
     "about": "Check out the little chess school",
     "region": "Eastlake",
-    "location": [20, 20]
+    "location": [47.639083, -122.325553]
   }
 ]
