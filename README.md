@@ -14,6 +14,10 @@ Perfect for date nights or lazy Sundays, this web app encourages people with bus
 2. Flâneur assigns you to random, nearby location
 3. Check-in and receive two new, surprise activities
 
+### See Flâneur in action
+
+[A rough beta version of Flâneur is hosted on my website](http://codyromano.com:8081/flaneur-web/). Please note that it's in the **very early** stages. I welcome your feedback, contributions (see below) and general feedback about the experience. :)
+
 ### How to contribute
 
 Check out and run the project locally: 
@@ -36,3 +40,4 @@ To add new events, [edit the activities.json file](https://github.com/codyromano
 - Improve the UI (it's currently rough and experimental)
 - Implement an incentives system - e.g. showing how many activities you have left to discover
 - Make it easier for contributors to submit activity ideas
+- Set up a proper production environment (configuring Webpack differently)
