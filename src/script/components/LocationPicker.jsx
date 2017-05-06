@@ -1,10 +1,13 @@
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router-dom';
 
 class LocationPicker extends React.Component {
   render() {
     const regions = this.props.regions.map((regionName, i) => {
       const callback = () => this.props.setLocation(regionName);
-      return (<button key={i} onClick={callback}>{regionName}</button>);
+      return (
+        <button key={i} onClick={callback}>{regionName}</button>
+      );
     });
     return (<div className="loc-picker">
       <strong>Current region:</strong>

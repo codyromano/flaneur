@@ -2,9 +2,9 @@ import React, {PropTypes} from 'react';
 
 class NextActivityPicker extends React.Component {
   render() {
-    const options = this.props.options.map(activity => {
+    const options = this.props.options.map((activity, i) => {
       const callback = () => this.props.pickNextActivity(activity);
-      return <button onClick={callback}>{activity.about}</button>;
+      return <button key={i} onClick={callback}>{activity.about}</button>;
     });
 
     return (<div className="next-activity-picker">

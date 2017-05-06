@@ -31,10 +31,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      components: path.resolve(__dirname, 'src/script/components'),
-      filters: path.resolve(__dirname, 'src/script/filters'),
-      data: path.resolve(__dirname, 'src/data'),
-      pages: path.resolve(__dirname, 'src/script/pages')
+      'flaneur-utils': path.resolve(__dirname, 'src/script/utils.js'),
+      'components': path.resolve(__dirname, 'src/script/components'),
+      'filters': path.resolve(__dirname, 'src/script/filters'),
+      'data': path.resolve(__dirname, 'src/data'),
+      'pages': path.resolve(__dirname, 'src/script/pages')
     }
   }
 };
