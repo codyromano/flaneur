@@ -1,0 +1,17 @@
+[
+  {
+    "about": "Walk to Eastlake and Lynn",
+    "region": "Eastlake",
+    "location": [10.2222, 10.3333]
+  },
+  {
+    "about": "Enjoy a coffee at Voxx",
+    "region": "Eastlake",
+    "location": [30.312, 30.1223]
+  },
+  {
+    "about": "Check out the little chess school",
+    "region": "Eastlake",
+    "location": [20, 20]
+  }
+]
