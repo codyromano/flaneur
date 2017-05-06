@@ -28,5 +28,15 @@
     "about": "Take a photo of Lake Union from the MOHAI",
     "region": "South Lake Union",
     "location": [47.6260643, -122.3385284]
+  },
+  {
+    "about": "Take a walk through Cal Anderson Park",
+    "region": "Capitol Hill",
+    "location": [47.617011, -122.319131]
+  },
+  {
+    "about": "Seattle Aquarium",
+    "region": "Downtown",
+    "location": [47.607257, -122.343736]
   }
 ]
