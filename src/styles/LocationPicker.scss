@@ -1,0 +1,9 @@
+@import 'manifest';
+
+.regionMenu {
+  @include basic-reset;
+}
+.regionLabel {
+  composes: label from './shared/label.scss';
+  margin-bottom: $layout-row-height;
+}

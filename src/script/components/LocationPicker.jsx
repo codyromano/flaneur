@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router-dom';
 import Button from 'components/Button.jsx';
+import styles from 'styles/LocationPicker.scss';
 
 class LocationPicker extends React.Component {
   render() {
@@ -11,8 +12,8 @@ class LocationPicker extends React.Component {
       );
     });
     return (<div className="loc-picker">
-      <strong>Current region:</strong>
-      <menu>
+      <strong className={styles.regionLabel}>Current region:</strong>
+      <menu className={styles.regionMenu}>
       {regions}
       </menu>
     </div>);

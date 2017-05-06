@@ -1,4 +1,7 @@
+@import 'manifest';
+
 .mainContainer {
+  font-family: $font-default;
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
