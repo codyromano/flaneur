@@ -8,12 +8,22 @@
   font-size: 1rem;
 
   cursor: pointer;
-  border: dashed 0.1rem #555;
-  padding: 0.5em 1.5em;
+  padding: 1em;
 
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: $color-actionable;
+  color: $color-actionable-text;
+
+  transition: background-color ease 0.5s;
+  border-radius: 0.25rem;
 }
-
+.button:hover {
+  background-color: $color-actionable-hover;
+}
+.button[disabled], .button[disabled] * {
+  background-color: $color-muted;
+  color: #000;
+  cursor: default;
+}
 .blockButton {
   composes: button;
   display: block;
@@ -21,7 +31,6 @@
   max-width: 30rem;
   margin-bottom: $layout-row-height-half;
 }
-
 .subtitle {
   display: block;
   margin-top: $layout-row-height-third;
