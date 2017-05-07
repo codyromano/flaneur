@@ -10,6 +10,7 @@ class NextActivityPicker extends React.Component {
         onClick={callback}
         region={activity.region}
         isLocked={false}
+        block={true}
         >{activity.about}</ActivityButton>;
     });
 
