@@ -12,13 +12,11 @@
   content: '';
   position: relative;
   display: inline-block;
-
+  background: url($src-icon-reward) no-repeat center;
+  background-size: cover;
   height: $rewards-table-logo-size;
   width: $rewards-table-logo-size;
   margin-right: 1rem;
-
-  background: url(http://business.reviewbuzz.com/wp-content/themes/review-buzz/images/rewards-points-icon.png) no-repeat center;
-  background-size: cover;
 }
 .quantityWrapper {
   position: relative;

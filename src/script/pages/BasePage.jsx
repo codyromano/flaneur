@@ -11,7 +11,7 @@ const withContainer = function(Page) {
   return props => {
     return (<div className={styles.mainContainer}>
       <Page {...props}/>
-      <Footer/>
+      <Footer explorerPoints={200}/>
     </div>);
   };
 };

@@ -1,12 +1,38 @@
 @import 'manifest';
 
+.container {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  align-content: center;
+}
 .footer {
+  box-shadow: 18px 9px 6px 8px #888888;
   position: fixed;
   z-index: 2;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3rem;
+  height: 3.25rem;
   background-color: #fff;
   border-top: solid $color-muted 0.1rem;
+  padding: 0.25rem;
+}
+.explorerPoints {
+  position: relative;
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: $footer-icon-size;
+}
+.explorerPoints::before {
+  position: absolute;
+  top: 0.15rem;
+  left: -$footer-icon-size - 0.5rem;
+  display: block;
+  content: '';
+  height: $footer-icon-size;
+  width: $footer-icon-size;
+  background: url($src-icon-reward) no-repeat center;
+  background-size: cover;
 }
