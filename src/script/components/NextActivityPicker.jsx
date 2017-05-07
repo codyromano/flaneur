@@ -8,7 +8,8 @@ class NextActivityPicker extends React.Component {
       return <ActivityButton
         key={i}
         onClick={callback}
-        subtitle={activity.region}
+        region={activity.region}
+        isLocked={false}
         >{activity.about}</ActivityButton>;
     });
 
