@@ -4,12 +4,14 @@ import PickRegionPage from 'pages/PickRegionPage.jsx';
 import PickNextPage from 'pages/PickNextActivityPage.jsx';
 import LandingPage from 'pages/LandingPage.jsx';
 import TravelPage from 'pages/TravelPage.jsx';
+import Footer from 'components/Footer.jsx';
 import styles from 'styles/BasePage.scss';
 
 const withContainer = function(Page) {
   return props => {
     return (<div className={styles.mainContainer}>
       <Page {...props}/>
+      <Footer/>
     </div>);
   };
 };
