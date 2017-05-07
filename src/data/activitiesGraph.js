@@ -3,6 +3,7 @@ import sortByRandom from 'filters/sortActivitiesByRandom';
 import filterByRegion from 'filters/filterActivitiesByRegion';
 import filterByVisited from 'filters/filterActivitiesByVisited';
 import mapActivitiesAssignId from 'filters/mapActivitiesAssignId';
+import mapAssignDifficulty from 'filters/mapActivitiesAssignDifficulty';
 
 import rawActivitiesData from 'data/activities.json';
 
@@ -57,6 +58,7 @@ export function getNextActivities(currentActivity, limit) {
   const options = activities
     .filter(filterByVisited(visited))
     .sort(sortByProximity(latitude, longitude))
+    .map(mapAssignDifficulty(activities))
     .slice(0, limit);
 
   return options.length ? options : null;
