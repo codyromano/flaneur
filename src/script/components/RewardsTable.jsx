@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import Button from 'components/Button.jsx';
+import Header from 'components/Header.jsx';
 import styles from 'styles/RewardsTable.scss';
 import {adjustFontSizeForInt} from 'flaneur-utils';
 
@@ -7,7 +8,7 @@ class RewardsTable extends React.Component {
   render() {
     const mockRewards = [
       {
-        quantity: 5000,
+        quantity: 50,
         type: 'explorerPoints',
         label: 'Explorer Points'
       },
@@ -18,7 +19,7 @@ class RewardsTable extends React.Component {
       }
     ];
 
-    const rewardRows = mockRewards.map(reward => {
+    const rewardRows = mockRewards.map((reward, i) => {
       const qtStyle = {
         fontSize: adjustFontSizeForInt(reward.quantity)
       };
@@ -27,7 +28,7 @@ class RewardsTable extends React.Component {
         styles.quantityWrapper
       ].join('');
 
-      return (<div className={styles.row}>
+      return (<div className={styles.row} key={i}>
         <div className={rewardClass} style={qtStyle}>
           {reward.quantity}
         </div>
@@ -37,7 +38,10 @@ class RewardsTable extends React.Component {
       </div>);
     });
 
-    return (<div>{rewardRows}</div>);
+    return (<div>
+      <Header level={2}>Rewards</Header>
+      {rewardRows}
+    </div>);
   }
 }
 
