@@ -2,41 +2,57 @@
   {
     "about": "Walk to Eastlake and Lynn",
     "region": "Eastlake",
-    "location": [47.639737, -122.325887]
+    "location": [47.639737, -122.325887],
+    "cost": 0,
+    "minutesRequired": 0
   },
   {
     "about": "Enjoy a coffee at Voxx",
     "region": "Eastlake",
-    "location": [47.639605, -122.326242]
+    "location": [47.639605, -122.326242],
+    "cost": 5,
+    "minutesRequired": 10
   },
   {
     "about": "Get a delicious drink or snack from Starbucks",
     "region": "Eastlake",
-    "location": [47.641021, -122.325562]
+    "location": [47.641021, -122.325562],
+    "cost": 5,
+    "minutesRequired": 10
   },
   {
     "about": "Check out the little chess school",
     "region": "Eastlake",
-    "location": [47.639083, -122.325553]
+    "location": [47.639083, -122.325553],
+    "cost": 0,
+    "minutesRequired": 5
   },
   {
     "about": "Board the Seattle Street Car going southbound",
     "region": "Eastlake",
-    "location": [47.6276113, -122.3343831]
+    "location": [47.6276113, -122.3343831],
+    "cost": 5,
+    "minutesRequired": 20
   },
   {
     "about": "Take a photo of Lake Union from the MOHAI",
     "region": "South Lake Union",
-    "location": [47.6260643, -122.3385284]
+    "location": [47.6260643, -122.3385284],
+    "cost": 0,
+    "minutesRequired": 25
   },
   {
     "about": "Take a walk through Cal Anderson Park",
     "region": "Capitol Hill",
-    "location": [47.617011, -122.319131]
+    "location": [47.617011, -122.319131],
+    "cost": 0,
+    "minutesRequired": 30
   },
   {
     "about": "Seattle Aquarium",
     "region": "Downtown",
-    "location": [47.607257, -122.343736]
+    "location": [47.607257, -122.343736],
+    "cost": 30,
+    "minutesRequired": 50
   }
 ]

@@ -1,0 +1,12 @@
+@import 'manifest';
+
+.header {
+  color: $color-heading;
+  margin-bottom: $layout-row-height;
+}
+.headerLevel1 {
+  font-size: 1.5rem;
+}
+.noGapBottom {
+  margin-bottom: 0;
+}
