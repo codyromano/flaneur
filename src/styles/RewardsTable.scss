@@ -1,0 +1,20 @@
+@import 'manifest';
+
+.row {
+  display: flex;
+  margin-bottom: $layout-row-height-half;
+  align-items: center;
+}
+.quantityWrapper {
+  font-weight: bold;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.label {
+  flex: 5;
+  font-style: italic;
+}
+.type {
+  font-weight: bold;
+}
