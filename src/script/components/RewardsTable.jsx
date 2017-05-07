@@ -19,6 +19,7 @@ class RewardsTable extends React.Component {
       }
     ];
 
+    // TODO: Create separate component for reward row
     const rewardRows = mockRewards.map((reward, i) => {
       const qtStyle = {
         fontSize: adjustFontSizeForInt(reward.quantity)
@@ -38,8 +39,8 @@ class RewardsTable extends React.Component {
       </div>);
     });
 
-    return (<div>
-      <Header level={2}>Rewards</Header>
+    return (<div className={styles.table}>
+      <Header noGapBottom={true} level={2}>Rewards</Header>
       {rewardRows}
     </div>);
   }

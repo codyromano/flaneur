@@ -10,6 +10,6 @@ export function routerRedirect(uri) {
 export function adjustFontSizeForInt(n, units = 'rem',
   minSize = 1, maxSize = 3) {
   const digits = n.toString().length;
-  const size = Math.max(minSize, maxSize - (digits * 0.25));
+  const size = Math.max(minSize, maxSize - (digits * 0.5));
   return `${size}${units}`;
 };

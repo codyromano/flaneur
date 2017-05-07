@@ -5,6 +5,9 @@ $layout-gutter: 1rem;
 $layout-row-height: 2rem;
 $layout-row-height-half: $layout-row-height / 2;
 $layout-row-height-third: $layout-row-height / 3;
+$layout-row-height-double: $layout-row-height * 2;
 $font-default: Avenir, Rubik;
 $color-muted: #555;
-$color-heading: #c0392b;
+$color-heading: #000;
+
+$rewards-table-logo-size: 2rem;

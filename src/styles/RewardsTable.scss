@@ -1,14 +1,29 @@
 @import 'manifest';
 
+.table {
+  margin-bottom: $layout-row-height;
+}
 .row {
   display: flex;
-  margin-bottom: $layout-row-height-half;
   align-items: center;
+  height: $layout-row-height-double;
+}
+.quantityWrapper::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+
+  height: $rewards-table-logo-size;
+  width: $rewards-table-logo-size;
+  margin-right: 1rem;
+
+  background: url(http://business.reviewbuzz.com/wp-content/themes/review-buzz/images/rewards-points-icon.png) no-repeat center;
+  background-size: cover;
 }
 .quantityWrapper {
+  position: relative;
   font-weight: bold;
-  flex: 1;
-  min-width: 25%;
+  width:8rem;
   justify-content: center;
 }
 .label {

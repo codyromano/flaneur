@@ -1,7 +1,7 @@
 @import 'manifest';
 
 .mainContainer {
-  padding: 0 $layout-gutter;
+  padding: $layout-gutter;
   font-family: $font-default;
   max-width: 50rem;
   margin-left: auto;

@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import Button from 'components/Button.jsx';
 import RewardsTable from 'components/RewardsTable.jsx';
+import Header from 'components/Header.jsx';
 
 class TravelCheckIn extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class TravelCheckIn extends React.Component {
     const {checkIn, activity} = this.props;
 
     return <div>
-      <h1>{about}</h1>
+      <Header level={1}>{about}</Header>
 
       <RewardsTable rewards={[]}/>
       <Button onClick={() => checkIn(activity)}>Check-in</Button>
