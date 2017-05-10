@@ -7,6 +7,10 @@ import TravelPage from 'pages/TravelPage.jsx';
 import Footer from 'components/Footer.jsx';
 import styles from 'styles/BasePage.scss';
 
+import flaneurStore from 'stores/flaneurStore';
+
+console.log(flaneurStore);
+
 const withContainer = function(Page) {
   return props => {
     return (<div className={styles.mainContainer}>

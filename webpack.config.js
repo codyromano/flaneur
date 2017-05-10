@@ -40,7 +40,9 @@ module.exports = {
       'components': path.resolve(__dirname, 'src/script/components'),
       'filters': path.resolve(__dirname, 'src/script/filters'),
       'data': path.resolve(__dirname, 'src/data'),
-      'pages': path.resolve(__dirname, 'src/script/pages')
+      'pages': path.resolve(__dirname, 'src/script/pages'),
+      'reducers': path.resolve(__dirname, 'src/script/reducers'),
+      'stores': path.resolve(__dirname, 'src/script/stores')
     }
   }
 };
