@@ -54,5 +54,40 @@
     "location": [47.607257, -122.343736],
     "cost": 30,
     "minutesRequired": 50
+  },
+  {
+    "about": "Go to the SIFF Cinema Egyptian",
+    "region": "Capitol Hill",
+    "location": [47.614904, -122.321730],
+    "cost": 15,
+    "minutesRequired": 120
+  },
+  {
+    "about": "Grab a coffee at Starbucks Roastery",
+    "region": "Capitol Hill",
+    "location": [0, 0],
+    "cost": 5,
+    "minutesRequired": 10
+  },
+  {
+    "about": "Go to AMC Pacific Place theater",
+    "region": "Downtown",
+    "location": [47.613126, -122.335489],
+    "cost": 15,
+    "minutesRequired": 120
+  },
+  {
+    "about": "Walk to Carrot Cafe",
+    "region": "Eastlake",
+    "location": [47.639936, -122.326233],
+    "cost": 20,
+    "minutesRequired": 45
+  },
+  {
+    "about": "Brunch or happy hour at Serafina",
+    "region": "Eastlake",
+    "location": [47.638093, -122.326127],
+    "cost": 25,
+    "minutesRequired": 45
   }
 ]
