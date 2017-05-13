@@ -89,5 +89,26 @@
     "location": [47.638093, -122.326127],
     "cost": 25,
     "minutesRequired": 45
+  },
+  {
+    "about": "Walk through Seattle Center",
+    "region": "Downtown",
+    "location": [47.622038, -122.352001],
+    "cost": 0,
+    "minutesRequired": 0
+  },
+  {
+    "about": "Catch a movie at Cinerama",
+    "region": "Belltown",
+    "location": [47.614006, -122.34131],
+    "cost": 15,
+    "minutesRequired": 90
+  },
+  {
+    "about": "Get a bacon cupcake",
+    "region": "Belltown",
+    "location": [47.614749, -122.343168],
+    "cost": 5,
+    "minutesRequired": 10
   }
 ]
