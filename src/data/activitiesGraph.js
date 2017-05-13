@@ -5,6 +5,7 @@ import filterByVisited from 'filters/filterActivitiesByVisited';
 import mapActivitiesAssignId from 'filters/mapActivitiesAssignId';
 import mapAssignDifficulty from 'filters/mapActivitiesAssignDifficulty';
 
+import {dedupe} from 'flaneur-utils';
 import rawActivitiesData from 'data/activities.json';
 
 const activities = rawActivitiesData.map(mapActivitiesAssignId());
@@ -26,11 +27,8 @@ export function markVisited(activity) {
 }
 
 export function getRegions() {
-  return [
-    'Eastlake',
-    'Downtown',
-    'Capitol Hill'
-  ];
+  const regions = activities.map(a => a.region);
+  return dedupe(regions);
 }
 
 export function getActivities() {

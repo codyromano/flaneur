@@ -24,3 +24,24 @@ export function average(numbers) {
   const sum = numbers.reduce((total, n) => total + n, 0);
   return numbers.length ? sum / numbers.length : null;
 }
+
+export function dedupe(array) {
+  const tempMap = {};
+  let result = [];
+
+  array.forEach(item => {
+    let key;
+    if (typeof item === 'object' && item !== null) {
+      key = JSON.stringify(key);
+    } else {
+      key = item;
+    }
+
+    if (!tempMap[key]) {
+      result.push(item);
+      tempMap[key] = 1;
+    }
+  });
+
+  return result;
+}
