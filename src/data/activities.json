@@ -110,5 +110,19 @@
     "location": [47.614749, -122.343168],
     "cost": 5,
     "minutesRequired": 10
+  },
+  {
+    "about": "Chill at Lynn St. Mini-park",
+    "region": "Eastlake",
+    "location": [47.639810, -122.329566],
+    "cost": 0,
+    "minutesRequired": 5
+  },
+  {
+    "about": "Grab a fun-sized candy from Pete's Market",
+    "region": "Eastlake",
+    "location": [47.639880, -122.329215],
+    "cost": 2,
+    "minutesRequired": 5
   }
 ]
