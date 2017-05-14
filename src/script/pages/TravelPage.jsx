@@ -18,7 +18,7 @@ class TravelPage extends React.Component {
     markVisited(activity);
     store.dispatch({
       type: Actions.get('CHANGE_EXPLORER_POINTS'),
-      points: 50
+      points: activity.pointsRewarded
     });
     routerRedirect('pick-next-activity');
   }
