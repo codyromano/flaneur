@@ -5,9 +5,9 @@ export default class Db {
   /**
   * @returns Promise
   */
-  save(key, value) {}
+  save(/*key, value*/) {}
   /**
   * @returns Promise
   */
-  get(key) {}
+  get(/*key*/) {}
 }

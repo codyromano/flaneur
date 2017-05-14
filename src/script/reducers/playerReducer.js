@@ -13,18 +13,18 @@ const initState = {
 export default function(state = initState, action = {}) {
   switch (action.type) {
     // TODO: Move to general app reducer
-    case Actions.get('SET_INITIAL_STATE'):
-      if (isObject(action.initState)) {
-        Object.assign(state, action.initState);
-        state.network = Object.assign(state.network || {}, {
-          initStateSetFromServer: true
-        });
-      }
+  case Actions.get('SET_INITIAL_STATE'):
+    if (isObject(action.initState)) {
+      Object.assign(state, action.initState);
+      state.network = Object.assign(state.network || {}, {
+        initStateSetFromServer: true
+      });
+    }
     break;
-    case Actions.get('CHANGE_EXPLORER_POINTS'):
-      if (Number.isInteger(action.points)) {
-        state.user.explorerPoints+= action.points;
-      } 
+  case Actions.get('CHANGE_EXPLORER_POINTS'):
+    if (Number.isInteger(action.points)) {
+      state.user.explorerPoints+= action.points;
+    } 
     break;
   }
   return state;

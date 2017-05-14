@@ -12,7 +12,7 @@ export default class LocalDatabase extends Database {
   isObject(key) {
     const localKey = this.getLocalKey(key);
     const flag = this.local.getItem(`${localKey}_isObject`);
-    return flag == "true";
+    return flag == 'true';
   }
   save(key, value) {
     const localKey = this.getLocalKey(key);

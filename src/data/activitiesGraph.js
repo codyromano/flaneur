@@ -58,7 +58,7 @@ export function getInitialActivity(selectedRegion) {
 export function getNextActivities(currentActivity, limit) {
   // TODO: Filter by not visited
   const latitude = currentActivity.location[0],
-        longitude = currentActivity.location[1];
+    longitude = currentActivity.location[1];
 
   const options = activities
     .filter(filterByVisited(visited))

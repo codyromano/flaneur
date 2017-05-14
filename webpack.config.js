@@ -1,3 +1,4 @@
+/* globals __dirname */
 const path = require('path');
 
 module.exports = {
@@ -10,7 +11,8 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader' 
+        loader: 'style!css-loader?modules&importLoaders=1&' +
+          'localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
       },
       {
         test: /\.json$/,
@@ -29,6 +31,15 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
+        }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          configFile: path.resolve(__dirname, '.eslintrc'),
+          cache: false
         }
       }
     ]
