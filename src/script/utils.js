@@ -68,3 +68,7 @@ export function makeEnum(keys = []) {
   keys.forEach(add);
   return {add, get};
 }
+
+export function isObject(any) {
+  return typeof any === 'object' && any !== null;
+}

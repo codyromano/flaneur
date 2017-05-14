@@ -7,7 +7,20 @@ import TravelPage from 'pages/TravelPage.jsx';
 import Footer from 'components/Footer.jsx';
 import styles from 'styles/BasePage.scss';
 
+import {isObject} from 'flaneur-utils';
+import {Actions} from 'flaneur-constants';
+
 import flaneurStore from 'stores/flaneurStore';
+import DatabaseFactory from 'stores/DatabaseFactory';
+
+const db = DatabaseFactory({});
+db.get('state').then(initState => {
+  console.log(`is: `, initState);
+  flaneurStore.dispatch({
+    type: Actions.get('SET_INITIAL_STATE'),
+    initState
+  });
+});
 
 const withContainer = function(Page, state = {}) {
   return props => {
@@ -26,13 +39,23 @@ class BasePage extends React.Component {
   }
   componentDidMount() {
     flaneurStore.subscribe(() => {
-      this.setState(
-        flaneurStore.getState()
-      );
+      const newState = flaneurStore.getState();
+
+      if (newState.network.initStateSetFromServer) {
+        this.setState(newState);
+
+        db.save('state', newState).then(result => {
+          console.info('saved');
+        });
+      }
     });
   }
   render() {
     const {state} = this;
+
+    if (!state.network.initStateSetFromServer) {
+      return <div>Loading</div>;
+    }
     return (
       <Switch>
         <Route path="/travel/:activityId"
