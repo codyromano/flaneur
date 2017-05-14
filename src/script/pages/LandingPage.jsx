@@ -22,7 +22,7 @@ class LandingPage extends React.Component {
           a city for the sake of exploring it.</h2>
 
           <Button onClick={this.onStartClick}
-            block={false}>Start Exploring</Button>
+            block={false}>Start Exploring Seattle</Button>
         </div>
       </div>
     );

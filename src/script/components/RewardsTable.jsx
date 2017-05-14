@@ -6,21 +6,8 @@ import {adjustFontSizeForInt} from 'flaneur-utils';
 
 class RewardsTable extends React.Component {
   render() {
-    const mockRewards = [
-      {
-        quantity: 50,
-        type: 'explorerPoints',
-        label: 'Explorer Points'
-      },
-      {
-        quantity: 2,
-        type: 'surpriseLocations',
-        label: 'Surprise Locations'
-      }
-    ];
-
     // TODO: Create separate component for reward row
-    const rewardRows = mockRewards.map((reward, i) => {
+    const rewardRows = this.props.rewards.map((reward, i) => {
       const qtStyle = {
         fontSize: adjustFontSizeForInt(reward.quantity)
       };
