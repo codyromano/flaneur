@@ -5,10 +5,12 @@ import {mainContainer} from 'styles/BasePage.scss';
 class Footer extends React.Component {
   render() {
     const containerClass = [mainContainer, styles.container].join(' ');
+    const {explorerPoints} = this.props.user;
+
     return (<footer className={styles.footer}>
       <div className={containerClass}>
         <div className={styles.explorerPoints}>
-          <span>{this.props.explorerPoints}</span>
+          <span>{explorerPoints}</span>
         </div>
       </div>
     </footer>);
@@ -16,7 +18,7 @@ class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  explorerPoints: PropTypes.number.isRequired
+  user: PropTypes.object.isRequired
 };
 
 export default Footer;

@@ -37,6 +37,7 @@ module.exports = {
     alias: {
       'styles': path.resolve(__dirname, 'src/styles'),
       'flaneur-utils': path.resolve(__dirname, 'src/script/utils.js'),
+      'flaneur-constants': path.resolve(__dirname, 'src/script/Constants.js'),
       'components': path.resolve(__dirname, 'src/script/components'),
       'filters': path.resolve(__dirname, 'src/script/filters'),
       'data': path.resolve(__dirname, 'src/data'),

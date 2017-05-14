@@ -9,13 +9,12 @@ import styles from 'styles/BasePage.scss';
 
 import flaneurStore from 'stores/flaneurStore';
 
-console.log(flaneurStore);
-
-const withContainer = function(Page) {
+const withContainer = function(Page, state = {}) {
   return props => {
+    const propsWithBasePageState = Object.assign({}, props, state);
     return (<div className={styles.mainContainer}>
-      <Page {...props}/>
-      <Footer explorerPoints={200}/>
+      <Page {...propsWithBasePageState}/>
+      <Footer {...propsWithBasePageState}/>
     </div>);
   };
 };
@@ -23,18 +22,27 @@ const withContainer = function(Page) {
 class BasePage extends React.Component {
   constructor() {
     super();
+    this.state = flaneurStore.getState();
+  }
+  componentDidMount() {
+    flaneurStore.subscribe(() => {
+      this.setState(
+        flaneurStore.getState()
+      );
+    });
   }
   render() {
+    const {state} = this;
     return (
       <Switch>
         <Route path="/travel/:activityId"
-          component={withContainer(TravelPage)}/>
+          component={withContainer(TravelPage, state)}/>
 
         <Route path="/pick-next-activity" 
-          component={withContainer(PickNextPage)}/>
+          component={withContainer(PickNextPage, state)}/>
 
         <Route path="/pick-region"
-          component={withContainer(PickRegionPage)}/>
+          component={withContainer(PickRegionPage, state)}/>
 
         <Route path="/" component={LandingPage}/>
       </Switch>

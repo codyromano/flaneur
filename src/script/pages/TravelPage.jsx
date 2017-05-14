@@ -2,6 +2,8 @@ import React, {PropTypes} from 'react';
 import TravelCheckIn from 'components/TravelCheckIn.jsx';
 import {markCurrent, markVisited, getActivityById} from 'data/activitiesGraph';
 import {routerRedirect} from 'flaneur-utils';
+import store from 'stores/flaneurStore';
+import {Actions} from 'flaneur-constants';
 
 class TravelPage extends React.Component {
   constructor({match}) {
@@ -14,6 +16,10 @@ class TravelPage extends React.Component {
   }
   checkIn(activity) {
     markVisited(activity);
+    store.dispatch({
+      type: Actions.get('CHANGE_EXPLORER_POINTS'),
+      points: 50
+    });
     routerRedirect('pick-next-activity');
   }
   render() {

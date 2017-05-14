@@ -45,3 +45,26 @@ export function dedupe(array) {
 
   return result;
 }
+
+export function makeEnum(keys = []) {
+  let keyMap = {};
+
+  const add = key => {
+    if (!keyMap[key]) {
+      keyMap[key] = key;
+    } else {
+      throw new Error(`Key ${key} already exists`);
+    }
+  };
+
+  const get = key => {
+    if (keyMap[key]) {
+      return keyMap[key];
+    } else {
+      throw new Error(`Unknown key: ${key}`);
+    }
+  };
+
+  keys.forEach(add);
+  return {add, get};
+}
