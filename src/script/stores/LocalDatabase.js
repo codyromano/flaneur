@@ -34,17 +34,21 @@ export default class LocalDatabase extends Database {
       const value = this.local.getItem(localKey);
 
       if (value === null) {
-        resolve(null);
-      } else if (this.isObject(key)) {
+        return resolve({});
+      }
+      if (this.isObject(key)) {
         try {
           const parsed = JSON.parse(value);
           resolve(parsed);
         } catch (err) {
           reject(`Error parsing local object with key :`, key, err);
         }
-      } else {
-        resolve(value);
+        return;
       }
+      if (typeof value === 'string') {
+        return resolve(value);
+      }
+      reject(`Error retrieving ${key} from Db.`);
     });
   }
 }

@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import {HashRouter, Route, Link, Switch} from 'react-router-dom';
+import React from 'react';
+import {Route, Switch} from 'react-router-dom';
 import PickRegionPage from 'pages/PickRegionPage.jsx';
 import PickNextPage from 'pages/PickNextActivityPage.jsx';
 import LandingPage from 'pages/LandingPage.jsx';
@@ -7,7 +7,6 @@ import TravelPage from 'pages/TravelPage.jsx';
 import Footer from 'components/Footer.jsx';
 import styles from 'styles/BasePage.scss';
 
-import {isObject} from 'flaneur-utils';
 import {Actions} from 'flaneur-constants';
 
 import flaneurStore from 'stores/flaneurStore';
@@ -15,7 +14,6 @@ import DatabaseFactory from 'stores/DatabaseFactory';
 
 const db = DatabaseFactory({});
 db.get('state').then(initState => {
-  console.log(`is: `, initState);
   flaneurStore.dispatch({
     type: Actions.get('SET_INITIAL_STATE'),
     initState
@@ -43,10 +41,7 @@ class BasePage extends React.Component {
 
       if (newState.network.initStateSetFromServer) {
         this.setState(newState);
-
-        db.save('state', newState).then(result => {
-          console.info('saved');
-        });
+        db.save('state', newState);
       }
     });
   }
