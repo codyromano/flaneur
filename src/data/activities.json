@@ -124,5 +124,26 @@
     "location": [47.639880, -122.329215],
     "cost": 2,
     "minutesRequired": 5
+  },
+  {
+    "about": "Take a walk through Fairview Park",
+    "region": "Eastlake",
+    "location": [47.647656, -122.324922],
+    "cost": 0,
+    "minutesRequired": 15
+  },
+  {
+    "about": "Drop by Le Fournil Bakery",
+    "region": "Eastlake",
+    "location": [47.650816, -122.32148],
+    "cost": 20,
+    "minutesRequired": 30
+  },
+  {
+    "about": "Lie on grass bank at Gas Works Park",
+    "region": "Wallingford",
+    "location": [47.645673, -122.334394],
+    "cost": 0,
+    "minutesRequired": 20
   }
 ]
