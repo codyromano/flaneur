@@ -8,3 +8,7 @@
   outline: 0;
   background-color: transparent;
 }
+@mixin vert-center {
+  display: flex;
+  align-items: center;
+}

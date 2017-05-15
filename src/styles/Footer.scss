@@ -1,12 +1,14 @@
 @import 'manifest';
 
 .container {
+  @include vert-center;
+  width: $layout-max-width - $footer-icon-size;
   margin-top: 0;
-  padding-top: 0;
-  display: flex;
-  align-content: center;
+  height: 100%;
 }
 .footer {
+  @include vert-center;
+
   box-shadow: 18px 9px 6px 8px #888888;
   position: fixed;
   z-index: 2;

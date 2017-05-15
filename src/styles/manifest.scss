@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'mixins';
 
+$layout-max-width: 50rem;
 $layout-gutter: 1rem;
 $layout-row-height: 2rem;
 $layout-row-height-half: $layout-row-height / 2;
@@ -15,4 +16,4 @@ $color-actionable-hover: #2980b9;
 $src-icon-reward: "http://business.reviewbuzz.com/wp-content/themes/review-buzz/images/rewards-points-icon.png";
 
 $rewards-table-logo-size: 2rem;
-$footer-icon-size: 1.5rem;
+$footer-icon-size: 1.75rem;
