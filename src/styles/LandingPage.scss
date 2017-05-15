@@ -22,10 +22,16 @@
   z-index: 1;
 }  
 .logo {
-  composes: heading from './shared/heading.scss';
-  font-size: 3rem;
+  font-size: 5rem;
+  font-family: Lobster Two;
+  color: $color-heading;
+  height: 1em;
+  margin-bottom: $layout-row-height;
 }
 .subheading {
   display: block;
+  color: #2c3e50;
+  font-size: 1.25rem;
   margin-bottom: $layout-row-height;
+  max-width: 20em;
 }
