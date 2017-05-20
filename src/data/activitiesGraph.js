@@ -66,7 +66,7 @@ export function getNextActivities(currentActivity, limit, user) {
 
   // To tease the user, we'll always include some options that are
   // locked. This incentivizes them to keep playing.
-  const totalLocked = 2;
+  const totalLocked = 1;
 
   if (limit - totalLocked < 1) {
     throw new Error(`next activities limit must be at least ${totalLocked}`);
