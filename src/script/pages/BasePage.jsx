@@ -4,6 +4,7 @@ import PickRegionPage from 'pages/PickRegionPage.jsx';
 import PickNextPage from 'pages/PickNextActivityPage.jsx';
 import LandingPage from 'pages/LandingPage.jsx';
 import TravelPage from 'pages/TravelPage.jsx';
+import DebugConsole from 'pages/DebugConsole.jsx';
 import Footer from 'components/Footer.jsx';
 import styles from 'styles/BasePage.scss';
 
@@ -61,6 +62,9 @@ class BasePage extends React.Component {
 
         <Route path="/pick-region"
           component={withContainer(PickRegionPage, state)}/>
+
+        <Route path="/debug"
+          component={DebugConsole}/>
 
         <Route path="/" component={LandingPage}/>
       </Switch>
