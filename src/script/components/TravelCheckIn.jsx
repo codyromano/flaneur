@@ -7,6 +7,7 @@ class TravelCheckIn extends React.Component {
   render() {
     const {about, pointsRewarded} = this.props.activity;
     const {checkIn, activity} = this.props;
+    const [latitude, longitude] = activity.location;
 
     const rewards = [
       {
@@ -21,10 +22,21 @@ class TravelCheckIn extends React.Component {
       }
     ];
 
+    const googleMapsLink = {
+      href: `https://www.google.com/maps/place/${latitude},${longitude}`,
+      target: '_blank',
+      style: {
+        color: 'rgb(255, 88, 4)',
+        textDecoration: 'none'
+      }
+    };
+
     return <div>
       <Header level={1}>{about}</Header>
 
       <RewardsTable rewards={rewards}/>
+      <p><a {...googleMapsLink}>Map &amp; Directions</a></p>
+
       <Button onClick={() => checkIn(activity)}>Check-in</Button>
     </div>;
   }
