@@ -35,3 +35,11 @@
   margin-bottom: $layout-row-height;
   max-width: 20em;
 }
+.version {
+  font-size: 0.75em;
+  font-family: Helvetica Neue, Helvetica;
+  color: #eee;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}

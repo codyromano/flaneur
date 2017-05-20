@@ -17,13 +17,17 @@ class LandingPage extends React.Component {
     return (
       <div className={styles.background}>
         <div className={landingContainer}>
-          <h1 className={styles.logo}>flâneur</h1>
+          <h1 className={styles.logo}>
+            flâneur
+          </h1>
           <h2 className={styles.subheading}>(Noun) A person who wanders through
           a city for the sake of exploring it.</h2>
 
           <Button onClick={this.onStartClick}
             block={false}>Start Exploring Seattle</Button>
         </div>
+      {/* TODO: Automate version number display */}
+        <span className={styles.version}>Version 1.0.0</span>
       </div>
     );
   }
