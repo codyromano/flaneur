@@ -1,32 +1,24 @@
 import React, {PropTypes} from 'react';
 import ActivityButton from 'components/ActivityButton.jsx';
 
-const getLockedPlacholder = id => {
-  return (
-    <ActivityButton
-      key={id}
-      onClick={() => {}}
-      region={'placeholder'}
-      isLocked={true}
-      block={true}
-    />
-  );
-};
-
 class NextActivityPicker extends React.Component {
-  render() {
+  render() { 
     const options = this.props.options.map((activity, i) => {
-      const callback = () => this.props.pickNextActivity(activity);
-      return <ActivityButton
-        key={i}
-        onClick={callback}
-        region={activity.region}
-        isLocked={false}
-        block={true}
-        >{activity.about}</ActivityButton>;
+      const isLocked = activity.pointsRequired >
+        this.props.user.explorerPoints;
 
-    }).concat(getLockedPlacholder('placeholder1'))
-      .concat(getLockedPlacholder('placeholder2'));
+      const callback = () => this.props.pickNextActivity(activity);
+      return (
+        <ActivityButton
+          key={i}
+          onClick={callback}
+          region={activity.region}
+          isLocked={isLocked}
+          block={true}>
+          {activity.about}
+        </ActivityButton>
+      );
+    });
 
     return (<div className="next-activity-picker">
       <h1>Choose next activity</h1>
@@ -36,6 +28,7 @@ class NextActivityPicker extends React.Component {
 }
 
 NextActivityPicker.propTypes = {
+  user: PropTypes.object.isRequired,
   pickNextActivity: PropTypes.func.isRequired,
   options: PropTypes.array.isRequired
 };

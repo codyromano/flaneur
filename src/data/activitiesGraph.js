@@ -2,11 +2,12 @@ import sortByProximity from 'filters/sortActivitiesByProximity';
 import sortByRandom from 'filters/sortActivitiesByRandom';
 import filterByRegion from 'filters/filterActivitiesByRegion';
 import filterByVisited from 'filters/filterActivitiesByVisited';
+import filterByLocked from 'filters/filterActivitiesByLocked';
 import mapActivitiesAssignId from 'filters/mapActivitiesAssignId';
 import mapAssignDifficulty from 'filters/mapActivitiesAssignDifficulty';
 import mapAssignExplorerPoints from 'filters/mapActivitiesAssignExplorerPoints';
 
-import {dedupe} from 'flaneur-utils';
+import {clone, negate, dedupe} from 'flaneur-utils';
 import rawActivitiesData from 'data/activities.json';
 
 let activities = rawActivitiesData;
@@ -55,15 +56,51 @@ export function getInitialActivity(selectedRegion) {
   return options.length ? options[0] : null;
 }
 
-export function getNextActivities(currentActivity, limit) {
-  // TODO: Filter by not visited
-  const latitude = currentActivity.location[0],
-    longitude = currentActivity.location[1];
+export function getNextActivities(currentActivity, limit, user) {
+  const [latitude, longitude] = currentActivity.location;
 
-  const options = activities
+  // All unvisited activities nearby
+  const allOptions = activities
     .filter(filterByVisited(visited))
-    .sort(sortByProximity(latitude, longitude))
-    .slice(0, limit);
+    .sort(sortByProximity(latitude, longitude));
 
-  return options.length ? options : null;
+  // To tease the user, we'll always include some options that are
+  // locked. This incentivizes them to keep playing.
+  const totalLocked = 2;
+
+  if (limit - totalLocked < 1) {
+    throw new Error(`next activities limit must be at least ${totalLocked}`);
+  }
+
+  const lockedFilter = filterByLocked(user);
+  const unlockedFilter = negate(lockedFilter);
+
+  let unlockedOptions = clone(
+    allOptions.filter(unlockedFilter)
+  );
+  let lockedOptions = clone(
+    allOptions.filter(lockedFilter)
+  );
+  
+  // Populate the results array with nearby, unlocked activities,
+  // but leave some room for "teaser" activities
+  let results = unlockedOptions.splice(0, limit - totalLocked);
+
+  while (results.length < limit &&
+    (unlockedOptions.length || lockedOptions.length)) {
+
+    // Use "teaser" activities if they exist. Otherwise, fall back
+    // to display activities that are unlocked.
+    if (lockedOptions.length) {
+      results.push(
+        lockedOptions.shift()
+      );
+    } else {
+      results.push(
+        unlockedOptions.shift()
+      );
+    }
+  }
+
+  return results.length && results || null;
 }

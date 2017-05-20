@@ -1,3 +1,16 @@
+export function negate(fn) {
+  return (...args) => !fn(...args);
+}
+
+// Note: this is shallow
+export function clone(object) {
+  if (Array.isArray(object)) {
+    return Object.assign([], object);
+  } else {
+    return Object.assign({}, object);
+  }
+}
+
 // TODO: Proper redirect using react router
 export function routerRedirect(uri) {
   if (uri === '/') {
