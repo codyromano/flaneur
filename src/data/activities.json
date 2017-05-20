@@ -145,5 +145,26 @@
     "location": [47.645673, -122.334394],
     "cost": 0,
     "minutesRequired": 20
+  },
+  {
+    "about": "Hear the Sunday Gregorian Chant at St. Mark's Cathedral",
+    "region": "Capitol Hill",
+    "location": [47.631900, -122.321367],
+    "cost": 0,
+    "minutesRequired": 90
+  },
+  {
+    "about": "Check out a murder mystery from the Central Public Library",
+    "region": "Downtown",
+    "location": [47.606701, -122.332501],
+    "cost": 0,
+    "minutesRequired": 60
+  },
+  {
+    "about": "Check out a travel guide from the Central Public Library",
+    "region": "Downtown",
+    "location": [47.606701, -122.332501],
+    "cost": 0,
+    "minutesRequired": 60
   }
 ]
