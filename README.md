@@ -1,6 +1,5 @@
 # flâ·neur
 ![](http://i.imgur.com/eooTeFl.jpg)
-## (Noun) A person who wanders through a city for the sake of exploring it
 
 ### Why use Flâneur?
 
