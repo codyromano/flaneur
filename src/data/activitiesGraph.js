@@ -9,6 +9,8 @@ import mapAssignExplorerPoints from 'filters/mapActivitiesAssignExplorerPoints';
 
 import {clone, negate, dedupe} from 'flaneur-utils';
 import rawActivitiesData from 'data/activities.json';
+import flaneurStore from 'stores/flaneurStore';
+import {Actions} from 'flaneur-constants';
 
 let activities = rawActivitiesData;
 
@@ -17,7 +19,11 @@ activities = activities
   .map(mapAssignDifficulty(activities))
   .map(mapAssignExplorerPoints(activities));
 
-const visited = {};
+// Keep a map of visited activities
+let visited = {};
+flaneurStore.subscribe(() => {
+  visited = flaneurStore.getState().visited;
+});
 
 // TODO: Need to manage this differently. Graph shouldn't be a singleton
 let currentActivity = null;
@@ -32,6 +38,10 @@ export function markCurrent(activity) {
 
 export function markVisited(activity) {
   visited[activity.id] = true;
+  flaneurStore.dispatch({
+    type: Actions.get('UPDATE_VISITED_MAP'),
+    visited
+  });
 }
 
 export function getRegions() {

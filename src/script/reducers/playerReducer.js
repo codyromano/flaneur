@@ -7,7 +7,8 @@ const initState = {
   },
   network: {
     initStateSetFromServer: false
-  }
+  },
+  visited: {}
 };
 
 export default function(state = initState, action = {}) {
@@ -25,6 +26,11 @@ export default function(state = initState, action = {}) {
     if (Number.isInteger(action.points)) {
       state.user.explorerPoints+= action.points;
     } 
+    break;
+  case Actions.get('UPDATE_VISITED_MAP'):
+    if (isObject(action.visited)) {
+      Object.assign(state.visited, action.visited);
+    }
     break;
   }
   return state;
