@@ -1,6 +1,8 @@
 # flâ·neur
 ![](http://i.imgur.com/eooTeFl.jpg)
 
+[Try the Beta version](http://codyromano.com:8081/flaneur-web/)
+
 ### Why use Flâneur?
 
 Sometimes you want to leave the house and go on an adventure, but it's hard to make plans and commit to them. With Flâneur, you can get up and go!
@@ -13,7 +15,7 @@ Perfect for date nights or lazy Sundays, this web app encourages people with bus
 2. Flâneur assigns you to random, nearby location
 3. Check-in and receive two new, surprise activities
 
-### See Flâneur in action
+### Try Flâneur
 
 [A rough beta version of Flâneur is hosted on my website](http://codyromano.com:8081/flaneur-web/). Please note that it's in the **very early** stages. I welcome your feedback, contributions (see below) and general feedback about the experience. :)
 
