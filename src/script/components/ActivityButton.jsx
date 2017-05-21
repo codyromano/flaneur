@@ -4,21 +4,23 @@ import styles from 'styles/Button.scss';
 
 class ActivityButton extends React.Component {
   render() {
-    const {isLocked, region} = this.props;
+    const {isLocked, region, pointsRequired} = this.props;
     const subtitle = isLocked && 'Locked' || region;
 
-    const props = Object.assign({}, this.props);
+    const props = Object.assign({}, this.props, {
+      subtitle: `Earn ${pointsRequired} explorer points to unlock`
+    });
 
     const className = this.props.block ? styles.blockButton : styles.button;
     props.className = (props.className || '').concat(className);
 
     if (isLocked) {
-      // TODO: Source required points from activity
-      const required = Math.round(100 + Math.random() * 3000);
-      return <Button {...props} subtitle={`Requires ${required} Explorer Points`}
+      return (
+        <Button {...props}
         disabled block={true}>
-        Locked
-      </Button>;
+        Undiscovered
+        </Button>
+      );
     }
     return <Button {...props} subtitle={subtitle} block={true}>
       {this.props.children}
@@ -28,6 +30,7 @@ class ActivityButton extends React.Component {
 
 ActivityButton.propTypes = {
   isLocked: PropTypes.bool.isRequired,
+  pointsRequired: PropTypes.number.isRequired,
   region: PropTypes.string.isRequired
 };
 

@@ -12,6 +12,7 @@ class NextActivityPicker extends React.Component {
         <ActivityButton
           key={i}
           onClick={callback}
+          pointsRequired={activity.pointsRequired}
           region={activity.region}
           isLocked={isLocked}
           block={true}>
