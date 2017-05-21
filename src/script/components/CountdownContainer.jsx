@@ -31,13 +31,15 @@ export default class CountdownContainer extends Component {
   }
   render() {
     const {duration} = this.state;
-    const timeProps = {
+    let timeProps = {
       humanTime: duration.humanize(),
       hours: duration.hours(),
       minutes: duration.minutes(),
-      seconds: duration.seconds(),
-      timeIsUp: duration.seconds() === 0
+      seconds: duration.seconds()
     };
+    timeProps.timeIsUp = !timeProps.hours &&
+      !timeProps.minutes &&
+      !timeProps.seconds;
 
     const childrenWithProps = React.Children.map(this.props.children,
      (child) => React.cloneElement(child, timeProps)
