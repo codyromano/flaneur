@@ -27,7 +27,7 @@ class LandingPage extends React.Component {
             block={false}>Start Exploring Seattle</Button>
         </div>
       {/* TODO: Automate version number display */}
-        <span className={styles.version}>Version 1.0.0</span>
+        <span className={styles.version}>Version 1.1.0</span>
       </div>
     );
   }

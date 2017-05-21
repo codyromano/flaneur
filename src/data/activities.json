@@ -166,5 +166,19 @@
     "location": [47.606701, -122.332501],
     "cost": 0,
     "minutesRequired": 60
+  },
+  {
+    "about": "Take a picture of Bruce Lee's tombstone",
+    "region": "Capitol Hill",
+    "location": [47.633770, -122.315828],
+    "cost": 0,
+    "minutesRequired": 45
+  },
+  {
+    "about": "Sit on the dock and text a friend with whom you want to catch up",
+    "region": "Eastlake",
+    "location": [47.631321, -122.327856],
+    "cost": 0,
+    "minutesRequired": 30
   }
 ]
