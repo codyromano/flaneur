@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import TravelCheckIn from 'components/TravelCheckIn.jsx';
+
 import {markCurrent, markVisited, getActivityById} from 'data/activitiesGraph';
 import {routerRedirect} from 'flaneur-utils';
 import store from 'stores/flaneurStore';
@@ -9,6 +10,7 @@ class TravelPage extends React.Component {
   constructor({match}) {
     super();
     this.state = {
+      startTime: new Date().getTime(),
       activity: getActivityById(match.params.activityId)
     };
     this.checkIn = this.checkIn.bind(this);

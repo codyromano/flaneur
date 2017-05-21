@@ -2,8 +2,17 @@ import React, {PropTypes} from 'react';
 import Button from 'components/Button.jsx';
 import RewardsTable from 'components/RewardsTable.jsx';
 import Header from 'components/Header.jsx';
+import CountdownContainer from 'components/CountdownContainer.jsx';
+import Countdown from 'components/Countdown.jsx';
+import {GameplaySettings} from 'flaneur-constants';
 
 class TravelCheckIn extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      startTime: new Date().getTime()
+    };
+  }
   render() {
     const {about, pointsRewarded} = this.props.activity;
     const {checkIn, activity} = this.props;
@@ -31,8 +40,17 @@ class TravelCheckIn extends React.Component {
       }
     };
 
+    const countdownProps = {
+      startTime: this.state.startTime,
+      duration: GameplaySettings.CheckinBonusTimeLimit
+    };
+
     return <div>
       <Header level={1}>{about}</Header>
+
+      <CountdownContainer {...countdownProps}>
+        <Countdown/>
+      </CountdownContainer>
 
       <RewardsTable rewards={rewards}/>
       <p><a {...googleMapsLink}>Map &amp; Directions</a></p>

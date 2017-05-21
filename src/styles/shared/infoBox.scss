@@ -1,0 +1,12 @@
+@import '../manifest';
+
+.infoBox {
+  border: dashed $color-highlighted 0.01rem;
+  padding: 0.75rem;
+  margin-bottom: $layout-row-height-half;
+  color: #000;
+
+  b, strong {
+    color: $color-highlighted;
+  }
+}
