@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import Button from 'components/Button.jsx';
 import Header from 'components/Header.jsx';
+import ImpactNumber from 'components/ImpactNumber.jsx';
 import styles from 'styles/RewardsTable.scss';
 import {adjustFontSizeForInt} from 'flaneur-utils';
 
@@ -18,7 +18,7 @@ class RewardsTable extends React.Component {
 
       return (<div className={styles.row} key={i}>
         <div className={rewardClass} style={qtStyle}>
-          {reward.quantity}
+          <ImpactNumber value={reward.quantity}/>
         </div>
         <div className={styles.label}>
           {reward.label}
