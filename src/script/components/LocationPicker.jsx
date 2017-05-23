@@ -1,11 +1,12 @@
 import React, {PropTypes} from 'react';
-import {Link} from 'react-router-dom';
 import Button from 'components/Button.jsx';
 import styles from 'styles/LocationPicker.scss';
 
 class LocationPicker extends React.Component {
   render() {
-    const regions = this.props.regions.map((regionName, i) => {
+    const regions = this.props.regions.sort((a, b) => {
+      return a > b ? 1 : -1;
+    }).map((regionName, i) => {
       const callback = () => this.props.setLocation(regionName);
       return (
         <Button key={i} onClick={callback}>{regionName}</Button>
