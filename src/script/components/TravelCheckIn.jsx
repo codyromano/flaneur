@@ -31,15 +31,8 @@ class TravelCheckIn extends React.Component {
       }
     ];
 
-    const googleMapsLink = {
-      href: `https://www.google.com/maps/place/${latitude},${longitude}`,
-      target: '_blank',
-      style: {
-        color: 'rgb(255, 88, 4)',
-        textDecoration: 'none'
-      }
-    };
-
+    const mapLink = `https://www.google.com/maps/place/` +
+      `${latitude},${longitude}`;
     const countdownProps = {
       startTime: this.state.startTime,
       duration: GameplaySettings.CheckinBonusTimeLimit
@@ -53,8 +46,10 @@ class TravelCheckIn extends React.Component {
       </CountdownContainer>
 
       <RewardsTable rewards={rewards}/>
-      <p><a {...googleMapsLink}>Map &amp; Directions</a></p>
 
+      <Button secondaryAction={true}
+      href={mapLink}
+      >Map &amp; Directions</Button>
       <Button onClick={() => checkIn(activity)}>Check-in</Button>
     </div>;
   }
