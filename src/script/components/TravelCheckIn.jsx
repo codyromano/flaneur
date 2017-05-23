@@ -54,6 +54,7 @@ class TravelCheckIn extends React.Component {
       <RewardsTable rewards={rewards}/>
 
       <Button secondaryAction={true}
+      target={'_blank'}
       href={mapLink}
       >Map &amp; Directions</Button>
 
