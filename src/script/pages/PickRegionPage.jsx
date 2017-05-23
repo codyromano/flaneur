@@ -1,10 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {routerRedirect} from 'flaneur-utils';
 
-import {Link} from 'react-router-dom';
 import LocationPicker from 'components/LocationPicker.jsx';
-
-import {getRegions, getInitialActivity, getNextActivities} from 'data/activitiesGraph';
+import {getRegions, getInitialActivity} from 'data/activitiesGraph';
 
 const regions = getRegions();
 
