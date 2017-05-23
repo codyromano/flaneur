@@ -1,8 +1,9 @@
 import React, {PropTypes} from 'react';
-import Button from 'components/Button.jsx';
 import RewardsTable from 'components/RewardsTable.jsx';
 import Header from 'components/Header.jsx';
 import CountdownContainer from 'components/CountdownContainer.jsx';
+import Button from 'components/Button.jsx';
+import CheckInButtonWrapper from 'components/CheckInButtonWrapper.jsx';
 import Countdown from 'components/Countdown.jsx';
 import {GameplaySettings} from 'flaneur-constants';
 
@@ -38,6 +39,11 @@ class TravelCheckIn extends React.Component {
       duration: GameplaySettings.CheckinBonusTimeLimit
     };
 
+    const checkInContainerProps = {
+      startTime: this.state.startTime,
+      duration: 1000 * 60
+    };
+
     return <div>
       <Header level={1}>{about}</Header>
 
@@ -50,7 +56,10 @@ class TravelCheckIn extends React.Component {
       <Button secondaryAction={true}
       href={mapLink}
       >Map &amp; Directions</Button>
-      <Button onClick={() => checkIn(activity)}>Check-in</Button>
+
+      <CountdownContainer {...checkInContainerProps}>
+        <CheckInButtonWrapper onClick={() => checkIn(activity)}/>
+      </CountdownContainer>
     </div>;
   }
 }

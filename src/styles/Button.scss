@@ -16,12 +16,12 @@
   transition: background-color ease 0.5s;
   border-radius: 0.25rem;
 }
-.button:not(.secondaryAction):hover {
+.button:not(.secondaryAction, [disabled]):hover {
   background-color: $color-actionable-hover;
 }
 .button[disabled], .button[disabled] * {
   background-color: $color-muted;
-  color: #000;
+  color: #555;
   cursor: default;
 }
 .blockButton {
