@@ -1,6 +1,7 @@
 @mixin basic-reset {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 @mixin reset-input-appearance {
   appearance: none;

@@ -2,6 +2,19 @@ export function negate(fn) {
   return (...args) => !fn(...args);
 }
 
+export function emptyFn() {
+}
+
+export function getClass(styleMap) {
+  let className = [];
+  for (const [classStr, condition] of Object.entries(styleMap)) {
+    if (condition) {
+      className.push(`.${classStr}`);
+    }
+  }
+  return className.join(' ');
+}
+
 // Note: this is shallow
 export function clone(object) {
   if (Array.isArray(object)) {

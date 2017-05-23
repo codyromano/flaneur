@@ -41,7 +41,7 @@ class TravelCheckIn extends React.Component {
 
     const checkInContainerProps = {
       startTime: this.state.startTime,
-      duration: 1000 * 60
+      duration: 1000 * 45
     };
 
     return <div>

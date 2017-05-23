@@ -4,6 +4,7 @@
   @include basic-reset;
   @include reset-input-appearance;
 
+  display: inline-block;
   font-weight: bold;
   font-size: 1rem;
 
@@ -15,6 +16,7 @@
 
   transition: background-color ease 0.5s;
   border-radius: 0.25rem;
+  text-align: center;
 }
 .button:not(.secondaryAction, [disabled]):hover {
   background-color: $color-actionable-hover;
